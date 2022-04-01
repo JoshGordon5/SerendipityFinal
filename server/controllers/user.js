@@ -1,10 +1,14 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
+import { ToastContainer, toast } from "react-toastify";
+
 
 import UserModal from "../models/user.js";
 import sendEmail from "../utils/sendEmail.js";
 import ErrorResponse from "../utils/errorResponse.js";
+
+
 
 const secret = 'test';
 
@@ -34,6 +38,7 @@ export const signup = async (req, res) => {
 
   if (user) {
     return res.status(400).json({ err: "Email is taken" });
+    
   }
 
   try {

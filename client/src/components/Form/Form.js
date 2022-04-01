@@ -62,8 +62,14 @@ const Form = ({ currentId, setCurrentId }) => {
               <MenuItem value="High">High</MenuItem>
         </Select>
         <div className={classes.fileInput}><FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} /></div>
-        <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
-        <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
+        <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth style={{
+              backgroundColor: "#062F6A",
+              color: '#fff'
+               }} >Submit</Button>
+        <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth style={{
+              backgroundColor: "#015095",
+              color: '#fff'
+               }}>Clear</Button>
       </form>
     </Paper>
   );
