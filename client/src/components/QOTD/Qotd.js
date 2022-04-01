@@ -27,8 +27,8 @@ export default function Qotd() {
             { random.map(quote => {
               return(
                 <React.Fragment key={quote.id}>
-                  <Typography component={'span'} style={{ color: "#fff" }} sx={{ fontSize: 30 }}>"{ quote.quote }" </Typography> 
-                  <Typography component={'span'} style={{ color: "#fff" }}>- { quote.author } </Typography>
+                  <Typography component={'span'} style={{ color: "#333" }} sx={{ fontSize: 30 }}>"{ quote.quote }" </Typography> 
+                  <Typography component={'span'} style={{ color: "#333" }}>- { quote.author } </Typography>
                 </React.Fragment>
               )
             })}

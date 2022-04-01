@@ -26,6 +26,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       marginLeft: 0,
     },
+    width: "30rem",
   },
   recommendedPosts: {
     display: 'flex',
@@ -49,5 +50,6 @@ export default makeStyles((theme) => ({
     height: '200px',
     overflowY: 'auto',
     marginRight: '30px',
+    width: "40rem",
   },
 }));

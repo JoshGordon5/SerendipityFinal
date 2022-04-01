@@ -1,14 +1,15 @@
 import axios from 'axios';
+require("dotenv").config({ path: 'C:\Users\JoshG\Downloads\SerendipityFinal\client\.env' })
 
-const URL = 'https://api.openweathermap.org/data/2.5/weather';
-const API_KEY = '6ea12b6d66e6304fba471dbfd0e63a4e';
+
+console.log(process.env.URL)
 
 export const fetchWeather = async (query) => {
-    const { data } = await axios.get(URL, {
+    const { data } = await axios.get(process.env.URL, {
         params: {
             q: query,
             units: 'metric',
-            APPID: API_KEY
+            APPID: process.env.API_KEY
         }
     });
 
